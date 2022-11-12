@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from "../assets/Metabnb-logo.png";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -8,7 +8,7 @@ function Navbar() {
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <a href="/" className="inline-flex items-center">
-            <svg
+            {/* <svg
               className="w-8 text-teal-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -22,10 +22,11 @@ function Navbar() {
               <rect x="3" y="17" width="7" height="6" />
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span className="ml-2 text-3xl font-bold tracking-wide text-gray-900 ">
+            </svg> */}
+            <img src={logo} alt="logo" className="my-4 w-36" />
+            {/* <span className="ml-2 text-3xl font-bold tracking-wide text-gray-900 ">
               Metabnb
-            </span>
+            </span> */}
           </a>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
