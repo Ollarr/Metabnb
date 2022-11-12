@@ -9,10 +9,10 @@ export default function Footer() {
 
   return (
     <div className="bg-gray-900 text-white p-2 py-10">
-      <div className="mx-6 align-center text-[14px] flex justify-between md:mx-28">
-        <div className="mb-4">
-          <img src={logowhite} alt="logo" className="my-4 w-36" />
-          <div className="flex justify-between w-[100px]">
+      <div className=" footer mx-6 align-center text-[14px] flex justify-between md:mx-28">
+        <div className="footer-icon  mb-4">
+          <img src={logowhite} alt="logo" className="my-4 mb-20 w-36" />
+          <div className="flex justify-between w-[100px] sm:justify-center sm:align-center">
             <span>
               <FaFacebookF />
             </span>
