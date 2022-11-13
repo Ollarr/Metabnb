@@ -60,9 +60,21 @@ const Main = () => {
       </div>
 
       <div className="flex justify-around bg-fuchsia-900 my-4 w-full h-12">
-        <img src={metaTokenLogo} alt="logo" className="w-3/12 my-3 md:my-2" />
-        <img src={metaMaskLogo} alt="logo" className="w-3/12 my-3 md:my-2" />
-        <img src={openSeaLogo} alt="logo" className="w-3/12 my-3  md:my-2" />
+        <img
+          src={metaTokenLogo}
+          alt="logo"
+          className="lg:w-32 my-3 md:my-2 w-18"
+        />
+        <img
+          src={metaMaskLogo}
+          alt="logo"
+          className="lg:w-32 my-3 md:my-2 w-18"
+        />
+        <img
+          src={openSeaLogo}
+          alt="logo"
+          className="lg:w-32 my-3  md:my-2 w-18"
+        />
       </div>
 
       <div>
@@ -71,10 +83,14 @@ const Main = () => {
             Inspiration for your next adventure
           </h1>
           <div>
-            <div className="my-4 grid gap-x-1 gap-y-1 grid-cols-2 md:grid-cols-4">
+            <div className="card my-4 grid gap-x-1 gap-y-1 grid-cols-2 lg:grid-cols-4">
               {images.map((image) => (
                 <div className="border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px]">
-                  <img src={image} alt="locations" />
+                  <img
+                    className="card-image w-full m-auto"
+                    src={image}
+                    alt="locations"
+                  />
                   <div className="flex justify-between mt-2">
                     <span>Desert King</span>
                     <b>1MBT per night</b>

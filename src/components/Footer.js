@@ -3,16 +3,16 @@ import logowhite from "../assets/Meta-logo-white.png";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
-  const community = ["NFT", "Tokens", "Landlords", "Discord"];
+  const communities = ["NFT", "Tokens", "Landlords", "Discord"];
   const places = ["Castle", "Farms", "Beach", "Learn more"];
   const about_us = ["Road map", "Creators", "Career", "Contact us"];
 
   return (
     <div className="bg-gray-900 text-white p-2 py-10">
-      <div className=" footer mx-6 align-center text-[14px] flex justify-between md:mx-28">
-        <div className="footer-icon  mb-4">
-          <img src={logowhite} alt="logo" className="my-4 mb-20 w-36" />
-          <div className="flex justify-between w-[100px] sm:justify-center sm:align-center">
+      <div className=" footer mx-6 align-center text-[18px] flex justify-between md:mx-28">
+        <div className=" footer-logo-and-icon mb-4">
+          <img src={logowhite} alt="logo" className="mb-20 w-36" />
+          <div className="footer-icon flex justify-between w-[100px] ">
             <span>
               <FaFacebookF />
             </span>
@@ -23,30 +23,31 @@ export default function Footer() {
               <FaTwitter />
             </span>
           </div>
+          <h5 className="text-xs mt-8">© 2022 Metabnb</h5>
         </div>
-        <div className="mb-4">
+        <div className=" mb-4">
           <b>Community</b>
-          {community.map((e) => (
-            <div className="font-light text-[12px] mb-2">
-              <span>{e}</span>
+          {communities.map((community) => (
+            <div className="footer-text font-light text-[14px] text-left mb-2">
+              <span>{community}</span>
             </div>
           ))}
         </div>
 
         <div className="mb-4">
           <b>Places</b>
-          {places.map((e) => (
-            <div className="font-light text-[12px] mb-2">
-              <span>{e}</span>
+          {places.map((place) => (
+            <div className="footer-text font-light text-[14px] text-left mb-2 ">
+              <span>{place}</span>
             </div>
           ))}
         </div>
 
         <div className="mb-4">
           <b>About Us</b>
-          {about_us.map((e) => (
-            <div className="font-light text-[12px] mb-2">
-              <span>{e}</span>
+          {about_us.map((aboutInfo) => (
+            <div className="footer-text font-light text-[14px] text-left mb-2">
+              <span>{aboutInfo}</span>
             </div>
           ))}
         </div>
