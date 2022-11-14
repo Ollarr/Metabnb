@@ -41,7 +41,7 @@ const Main = () => {
             metaverse, get a chance to turn your imagination to reality at your
             comfort zone
           </p>
-          <form class="flex">
+          <form className="flex">
             <input
               type="text"
               name="text"
@@ -83,21 +83,21 @@ const Main = () => {
             Inspiration for your next adventure
           </h1>
           <div>
-            <div className="card my-4 grid gap-x-1 gap-y-1 grid-cols-2 lg:grid-cols-4">
+            <div className="card my-4 mx-auto grid gap-x-1 gap-y-1 grid-cols-2 lg:grid-cols-4">
               {images.map((image) => (
-                <div className="border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px]">
+                <div className=" lg:w-[270px] border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px] md:w-[100%]">
                   <img
                     className="card-image w-full m-auto"
                     src={image}
                     alt="locations"
                   />
                   <div className="flex justify-between mt-2">
-                    <span>Desert King</span>
+                    <p>Desert King</p>
                     <b>1MBT per night</b>
                   </div>
-                  <div className="flex justify-between mt-2">
-                    <span>2345km away</span>
-                    <b>available for 2weeks stay</b>
+                  <div className="text-xs flex justify-between mt-2">
+                    <p>2345km away</p>
+                    <p>available for 2weeks stay</p>
                   </div>
                   <div className="flex my-2 text-fuchsia-800">
                     <FaStar className="mr-1" />

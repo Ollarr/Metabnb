@@ -17,8 +17,8 @@ import cardImage16 from "../assets/Card-image-16.png";
 
 import { FaStar } from "react-icons/fa";
 import { VscSettings } from "react-icons/vsc";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 
 function PlaceToStay() {
   const places = [
@@ -42,30 +42,30 @@ function PlaceToStay() {
 
   const filter = [
     "Restaurant",
-    "cottage",
-    "castle",
-    "fantastic city",
-    "beach",
-    "carbins",
-    "off-grids",
-    "farm",
+    "Cottage",
+    "Castle",
+    "Fantastic city",
+    "Beach",
+    "Carbins",
+    "Off-grids",
+    "Farm",
   ];
   return (
     <div>
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="m-4 md:mx-20 md:my-10">
-          <div className="filter-container flex jusify-between gap-x-8">
+          <div className="filter-container flex justify-evenly gap-y-8">
             {/* <div className="grid grid-cols-8 grid-flow-rows gap-2 mr-8 w-auto md:w-[80%]"> */}
-            <div className="flex flex-wrap justify-between gap-x-10 w-auto m-x-auto">
+            <div className="flex flex-wrap justify-between gap-x-10  w-auto m-x-auto">
               {filter.map((filter) => (
-                <h4 className=" filter-heading lg:text-xl text-center ">
-                  {filter}
-                </h4>
+                <h4 className=" filter-heading">{filter}</h4>
               ))}
             </div>
             <div className="flex px-2 py-1 justify-center items-center space-x-4 border border-black rounded-md ">
-              <button className="lg:inline w-full md:block">Location</button>
+              <button className="lg:inline text-base w-full md:block">
+                Location
+              </button>
               <span className=" ">
                 <VscSettings />
               </span>
@@ -75,19 +75,19 @@ function PlaceToStay() {
           <div>
             <div className="card my-4 grid gap-x-1 gap-y-1 grid-cols-2 md:grid-cols-4">
               {places.map((place) => (
-                <div className="border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px]">
+                <div className="lg:w-[270px] border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px] md:w-[100%]">
                   <img
                     className="card-image w-full m-auto"
                     src={place}
                     alt="place"
                   />
                   <div className="flex justify-between mt-2">
-                    <span className="text-xs">Desert King</span>
+                    <p className="text-xs">Desert King</p>
                     <b>1MBT per night</b>
                   </div>
-                  <div className="flex justify-between mt-2">
-                    <span className="text-xs">2345km away</span>
-                    <b>available for 2weeks stay</b>
+                  <div className="text-xs flex justify-between mt-2">
+                    <p>2345km away</p>
+                    <p>available for 2weeks stay</p>
                   </div>
                   <div className="flex my-2 text-fuchsia-800">
                     <FaStar className="mr-1" />
@@ -101,7 +101,7 @@ function PlaceToStay() {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

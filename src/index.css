@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 body {
+  padding: 0;
   margin: 0;
   font-family: "Red Rose", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-x: hidden; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.filter-heading {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -30,13 +35,17 @@ code {
   .footer-text {
     text-align: center;
   }
+  /* .filter-container {
+    display: flex;
+    flex-direction: column;
+  } */
+}
+
+@media screen and (max-width: 950px) {
   .filter-container {
     display: flex;
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 950px) {
   .filter-heading {
     font-size: 12px;
   }

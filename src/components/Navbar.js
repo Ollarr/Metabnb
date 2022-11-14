@@ -1,18 +1,17 @@
 import { useState } from "react";
 import logo from "../assets/Metabnb-logo.png";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="bg-white-400">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 ">
         <div className="relative flex items-center justify-between">
           <a href="/" className="inline-flex items-center">
-            <img src={logo} alt="logo" className="my-4 w-36" />
-            {/* <span className="ml-2 text-3xl font-bold tracking-wide text-gray-900 ">
-              Metabnb
-            </span> */}
+            <img src={logo} alt="logo" className="my-4 w-56" />
           </a>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
@@ -20,7 +19,7 @@ function Navbar() {
                 href="/"
                 aria-label="Home"
                 title="Home"
-                className="font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
+                className="text-xl font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Home
               </a>
@@ -30,7 +29,7 @@ function Navbar() {
                 to="places"
                 aria-label="Place to stay"
                 title="Place to stay"
-                className="font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
+                className="text-xl font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Place to stay
               </Link>
@@ -40,7 +39,7 @@ function Navbar() {
                 href="/"
                 aria-label="NFTs"
                 title="NFTs"
-                className="font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
+                className="text-xl font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 NFTs
               </a>
@@ -50,7 +49,7 @@ function Navbar() {
                 href="/"
                 aria-label="Community"
                 title="Community"
-                className="font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
+                className="text-xl font-medium font-bold tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Community
               </a>
@@ -58,14 +57,16 @@ function Navbar() {
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="/"
-                className="font-bold bg-fuchsia-900 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  focus:shadow-outline focus:outline-none"
+              <button
+                className="text-xl font-bold bg-fuchsia-900 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  focus:shadow-outline focus:outline-none"
                 aria-label="Connect Wallet"
                 title="Connect Wallet"
+                onClick={() => {
+                  setOpenModal(true);
+                }}
               >
                 Connect Wallet
-              </a>
+              </button>
             </li>
           </ul>
           <div className="lg:hidden">
@@ -96,24 +97,7 @@ function Navbar() {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <a href="/" className="inline-flex items-center">
-                        <svg
-                          className="w-8 text-deep-purple-accent-400"
-                          viewBox="0 0 24 24"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeMiterlimit="10"
-                          stroke="currentColor"
-                          fill="none"
-                        >
-                          <rect x="3" y="1" width="7" height="12" />
-                          <rect x="3" y="17" width="7" height="6" />
-                          <rect x="14" y="1" width="7" height="6" />
-                          <rect x="14" y="11" width="7" height="12" />
-                        </svg>
-                        <span className="ml-2 text-3xl font-bold tracking-wide text-gray-800 ">
-                          Metabnb
-                        </span>
+                        <img src={logo} alt="logo" className="my-4 w-36" />
                       </a>
                     </div>
                     <div>
@@ -175,14 +159,16 @@ function Navbar() {
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <button
                           className=" font-medium font-bold inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-fuchsia-900  focus:shadow-outline focus:outline-none"
                           aria-label="Connect Wallet"
                           title="Connect Wallet"
+                          onClick={() => {
+                            setOpenModal(true);
+                          }}
                         >
                           Connect Wallet
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </nav>
@@ -192,6 +178,7 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
     </div>
   );
 }

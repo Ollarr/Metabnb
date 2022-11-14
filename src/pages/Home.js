@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import Main from "../components/Main";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Main />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

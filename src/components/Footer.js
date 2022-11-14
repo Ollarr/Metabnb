@@ -11,15 +11,15 @@ export default function Footer() {
     <div className="bg-gray-900 text-white p-2 py-10">
       <div className=" footer mx-6 align-center text-[18px] flex justify-between md:mx-28">
         <div className=" footer-logo-and-icon mb-4">
-          <img src={logowhite} alt="logo" className="mb-20 w-36" />
+          <img src={logowhite} alt="logo" className="mb-20 w-56" />
           <div className="footer-icon flex justify-between w-[100px] ">
-            <span>
+            <span className="cursor-pointer">
               <FaFacebookF />
             </span>
-            <span>
+            <span className="cursor-pointer">
               <FaInstagram />
             </span>
-            <span>
+            <span className="cursor-pointer">
               <FaTwitter />
             </span>
           </div>
